@@ -14,6 +14,8 @@
 		8E10F5E1261C8AB500F63D3D /* Metta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E10F5DF261C8AB500F63D3D /* Metta.xcdatamodeld */; };
 		8E10F5E3261C8AB500F63D3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E10F5E2261C8AB500F63D3D /* Assets.xcassets */; };
 		8E10F5E6261C8AB500F63D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E10F5E4261C8AB500F63D3D /* LaunchScreen.storyboard */; };
+		8EC30D24261EC16B000AE83E /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC30D23261EC16B000AE83E /* Meditation.swift */; };
+		8EC30D27261EC1A2000AE83E /* MeditationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC30D26261EC1A2000AE83E /* MeditationData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		8E10F5E5261C8AB500F63D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E10F5E7261C8AB500F63D3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E3E6E48261C8FFF0079FDB0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8EC30D23261EC16B000AE83E /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
+		8EC30D26261EC1A2000AE83E /* MeditationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				8E10F5DF261C8AB500F63D3D /* Metta.xcdatamodeld */,
+				8EC30D23261EC16B000AE83E /* Meditation.swift */,
+				8EC30D26261EC1A2000AE83E /* MeditationData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +180,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EC30D24261EC16B000AE83E /* Meditation.swift in Sources */,
+				8EC30D27261EC1A2000AE83E /* MeditationData.swift in Sources */,
 				8E10F5DB261C8AB500F63D3D /* ViewController.swift in Sources */,
 				8E10F5E1261C8AB500F63D3D /* Metta.xcdatamodeld in Sources */,
 				8E10F5D7261C8AB500F63D3D /* AppDelegate.swift in Sources */,
