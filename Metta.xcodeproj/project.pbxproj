@@ -16,6 +16,7 @@
 		8E10F5E6261C8AB500F63D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E10F5E4261C8AB500F63D3D /* LaunchScreen.storyboard */; };
 		8EC30D24261EC16B000AE83E /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC30D23261EC16B000AE83E /* Meditation.swift */; };
 		8EC30D27261EC1A2000AE83E /* MeditationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC30D26261EC1A2000AE83E /* MeditationData.swift */; };
+		BFAB6428261EC6D200F98711 /* MeditationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB6426261EC6C100F98711 /* MeditationDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		8E3E6E48261C8FFF0079FDB0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8EC30D23261EC16B000AE83E /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
 		8EC30D26261EC1A2000AE83E /* MeditationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationData.swift; sourceTree = "<group>"; };
+		BFAB6426261EC6C100F98711 /* MeditationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDetailViewController.swift; sourceTree = "<group>"; };
+		BFAB6427261EC6C100F98711 /* MeditationDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,7 @@
 		8E3E6E44261C8F5A0079FDB0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BFAB6426261EC6C100F98711 /* MeditationDetailViewController.swift */,
 				8E10F5DA261C8AB500F63D3D /* ViewController.swift */,
 			);
 			path = Controller;
@@ -86,6 +90,7 @@
 		8E3E6E45261C8F660079FDB0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BFAB6427261EC6C100F98711 /* MeditationDetailViewController.xib */,
 				8E10F5DC261C8AB500F63D3D /* Main.storyboard */,
 			);
 			path = View;
@@ -180,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFAB6428261EC6D200F98711 /* MeditationDetailViewController.swift in Sources */,
 				8EC30D24261EC16B000AE83E /* Meditation.swift in Sources */,
 				8EC30D27261EC1A2000AE83E /* MeditationData.swift in Sources */,
 				8E10F5DB261C8AB500F63D3D /* ViewController.swift in Sources */,
