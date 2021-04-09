@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		8E10F5E1261C8AB500F63D3D /* Metta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E10F5DF261C8AB500F63D3D /* Metta.xcdatamodeld */; };
 		8E10F5E3261C8AB500F63D3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E10F5E2261C8AB500F63D3D /* Assets.xcassets */; };
 		8E10F5E6261C8AB500F63D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E10F5E4261C8AB500F63D3D /* LaunchScreen.storyboard */; };
+		8EB3A4FA26207A1700D0A6FD /* SwiftyGif in Frameworks */ = {isa = PBXBuildFile; productRef = 8EB3A4F926207A1700D0A6FD /* SwiftyGif */; };
 		8EC30D24261EC16B000AE83E /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC30D23261EC16B000AE83E /* Meditation.swift */; };
 		8EC30D27261EC1A2000AE83E /* MeditationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC30D26261EC1A2000AE83E /* MeditationData.swift */; };
 		B584D49F26202FF50098BE82 /* MeditationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584D49E26202FD90098BE82 /* MeditationCell.swift */; };
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EB3A4FA26207A1700D0A6FD /* SwiftyGif in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +171,9 @@
 			dependencies = (
 			);
 			name = Metta;
+			packageProductDependencies = (
+				8EB3A4F926207A1700D0A6FD /* SwiftyGif */,
+			);
 			productName = Metta;
 			productReference = 8E10F5D3261C8AB500F63D3D /* Metta.app */;
 			productType = "com.apple.product-type.application";
@@ -196,6 +201,9 @@
 				Base,
 			);
 			mainGroup = 8E10F5CA261C8AB500F63D3D;
+			packageReferences = (
+				8EB3A4F826207A1700D0A6FD /* XCRemoteSwiftPackageReference "SwiftyGif" */,
+			);
 			productRefGroup = 8E10F5D4261C8AB500F63D3D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -437,6 +445,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8EB3A4F826207A1700D0A6FD /* XCRemoteSwiftPackageReference "SwiftyGif" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kirualex/SwiftyGif.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8EB3A4F926207A1700D0A6FD /* SwiftyGif */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EB3A4F826207A1700D0A6FD /* XCRemoteSwiftPackageReference "SwiftyGif" */;
+			productName = SwiftyGif;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8E10F5DF261C8AB500F63D3D /* Metta.xcdatamodeld */ = {
