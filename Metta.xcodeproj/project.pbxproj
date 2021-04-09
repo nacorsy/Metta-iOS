@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		8E10F5E1261C8AB500F63D3D /* Metta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E10F5DF261C8AB500F63D3D /* Metta.xcdatamodeld */; };
 		8E10F5E3261C8AB500F63D3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E10F5E2261C8AB500F63D3D /* Assets.xcassets */; };
 		8E10F5E6261C8AB500F63D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E10F5E4261C8AB500F63D3D /* LaunchScreen.storyboard */; };
+		8E5CB124261F0E6200531E5E /* MeditationTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5CB122261F0E6200531E5E /* MeditationTimerViewController.swift */; };
+		8E5CB125261F0E6200531E5E /* MeditationTimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E5CB123261F0E6200531E5E /* MeditationTimerViewController.xib */; };
+		8E5CB131261F77F200531E5E /* SwiftyGif in Frameworks */ = {isa = PBXBuildFile; productRef = 8E5CB130261F77F200531E5E /* SwiftyGif */; };
 		8EC30D24261EC16B000AE83E /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC30D23261EC16B000AE83E /* Meditation.swift */; };
 		8EC30D27261EC1A2000AE83E /* MeditationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC30D26261EC1A2000AE83E /* MeditationData.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +32,8 @@
 		8E10F5E5261C8AB500F63D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E10F5E7261C8AB500F63D3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E3E6E48261C8FFF0079FDB0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8E5CB122261F0E6200531E5E /* MeditationTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationTimerViewController.swift; sourceTree = "<group>"; };
+		8E5CB123261F0E6200531E5E /* MeditationTimerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationTimerViewController.xib; sourceTree = "<group>"; };
 		8EC30D23261EC16B000AE83E /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
 		8EC30D26261EC1A2000AE83E /* MeditationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E5CB131261F77F200531E5E /* SwiftyGif in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				8E10F5DA261C8AB500F63D3D /* ViewController.swift */,
+				8E5CB122261F0E6200531E5E /* MeditationTimerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -86,6 +93,7 @@
 		8E3E6E45261C8F660079FDB0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8E5CB123261F0E6200531E5E /* MeditationTimerViewController.xib */,
 				8E10F5DC261C8AB500F63D3D /* Main.storyboard */,
 			);
 			path = View;
@@ -126,6 +134,9 @@
 			dependencies = (
 			);
 			name = Metta;
+			packageProductDependencies = (
+				8E5CB130261F77F200531E5E /* SwiftyGif */,
+			);
 			productName = Metta;
 			productReference = 8E10F5D3261C8AB500F63D3D /* Metta.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +164,9 @@
 				Base,
 			);
 			mainGroup = 8E10F5CA261C8AB500F63D3D;
+			packageReferences = (
+				8E5CB12F261F77F100531E5E /* XCRemoteSwiftPackageReference "SwiftyGif" */,
+			);
 			productRefGroup = 8E10F5D4261C8AB500F63D3D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -167,6 +181,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E5CB125261F0E6200531E5E /* MeditationTimerViewController.xib in Resources */,
 				8E10F5E6261C8AB500F63D3D /* LaunchScreen.storyboard in Resources */,
 				8E10F5E3261C8AB500F63D3D /* Assets.xcassets in Resources */,
 				8E10F5DE261C8AB500F63D3D /* Main.storyboard in Resources */,
@@ -181,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC30D24261EC16B000AE83E /* Meditation.swift in Sources */,
+				8E5CB124261F0E6200531E5E /* MeditationTimerViewController.swift in Sources */,
 				8EC30D27261EC1A2000AE83E /* MeditationData.swift in Sources */,
 				8E10F5DB261C8AB500F63D3D /* ViewController.swift in Sources */,
 				8E10F5E1261C8AB500F63D3D /* Metta.xcdatamodeld in Sources */,
@@ -385,6 +401,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E5CB12F261F77F100531E5E /* XCRemoteSwiftPackageReference "SwiftyGif" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kirualex/SwiftyGif.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E5CB130261F77F200531E5E /* SwiftyGif */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E5CB12F261F77F100531E5E /* XCRemoteSwiftPackageReference "SwiftyGif" */;
+			productName = SwiftyGif;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8E10F5DF261C8AB500F63D3D /* Metta.xcdatamodeld */ = {
