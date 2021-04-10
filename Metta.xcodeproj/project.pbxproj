@@ -249,6 +249,7 @@
 				B5C3DC0A26220EDF00FA1865 /* ViewController.swift in Sources */,
 				B5C3DC0D262213E300FA1865 /* DetailVC.swift in Sources */,
 				8E10F5D7261C8AB500F63D3D /* AppDelegate.swift in Sources */,
+				B5C3DBEE26217B2700FA1865 /* ViewController.swift in Sources */,
 				8E10F5D9261C8AB500F63D3D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
