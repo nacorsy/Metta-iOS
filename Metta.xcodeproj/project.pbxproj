@@ -25,7 +25,7 @@
 		B584D4B726206CBC0098BE82 /* meditate-sound-1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B584D4B426206CA40098BE82 /* meditate-sound-1.m4a */; };
 		B5C3DBE62621781000FA1865 /* MeditationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C3DBE52621781000FA1865 /* MeditationCell.swift */; };
 		B5C3DBEA2621782A00FA1865 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C3DBE92621782A00FA1865 /* Main.storyboard */; };
-		B5C3DBEE26217B2700FA1865 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C3DBED26217B2700FA1865 /* ViewController.swift */; };
+		B5C3DC0A26220EDF00FA1865 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C3DC0926220EDF00FA1865 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +49,7 @@
 		B584D4B426206CA40098BE82 /* meditate-sound-1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "meditate-sound-1.m4a"; sourceTree = "<group>"; };
 		B5C3DBE52621781000FA1865 /* MeditationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationCell.swift; sourceTree = "<group>"; };
 		B5C3DBE92621782A00FA1865 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		B5C3DBED26217B2700FA1865 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../../../Metta-iOS copy/Metta/Controller/ViewController.swift"; sourceTree = "<group>"; };
+		B5C3DC0926220EDF00FA1865 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,7 @@
 		8E3E6E44261C8F5A0079FDB0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B5C3DBED26217B2700FA1865 /* ViewController.swift */,
+				B5C3DC0926220EDF00FA1865 /* ViewController.swift */,
 				B5C3DBE52621781000FA1865 /* MeditationCell.swift */,
 			);
 			path = Controller;
@@ -243,8 +243,8 @@
 				8EC30D27261EC1A2000AE83E /* MeditationData.swift in Sources */,
 				8E10F5E1261C8AB500F63D3D /* Metta.xcdatamodeld in Sources */,
 				B5C3DBE62621781000FA1865 /* MeditationCell.swift in Sources */,
+				B5C3DC0A26220EDF00FA1865 /* ViewController.swift in Sources */,
 				8E10F5D7261C8AB500F63D3D /* AppDelegate.swift in Sources */,
-				B5C3DBEE26217B2700FA1865 /* ViewController.swift in Sources */,
 				8E10F5D9261C8AB500F63D3D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
