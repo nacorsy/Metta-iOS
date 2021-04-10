@@ -26,6 +26,7 @@
 		B5C3DBE62621781000FA1865 /* MeditationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C3DBE52621781000FA1865 /* MeditationCell.swift */; };
 		B5C3DBEA2621782A00FA1865 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C3DBE92621782A00FA1865 /* Main.storyboard */; };
 		B5C3DC0A26220EDF00FA1865 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C3DC0926220EDF00FA1865 /* ViewController.swift */; };
+		B5C3DC0D262213E300FA1865 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C3DC0C262213E300FA1865 /* DetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		B5C3DBE52621781000FA1865 /* MeditationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationCell.swift; sourceTree = "<group>"; };
 		B5C3DBE92621782A00FA1865 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B5C3DC0926220EDF00FA1865 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B5C3DC0C262213E300FA1865 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailVC.swift; path = Metta/View/DetailVC.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		8E3E6E44261C8F5A0079FDB0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B5C3DC0C262213E300FA1865 /* DetailVC.swift */,
 				B5C3DC0926220EDF00FA1865 /* ViewController.swift */,
 				B5C3DBE52621781000FA1865 /* MeditationCell.swift */,
 			);
@@ -244,6 +247,7 @@
 				8E10F5E1261C8AB500F63D3D /* Metta.xcdatamodeld in Sources */,
 				B5C3DBE62621781000FA1865 /* MeditationCell.swift in Sources */,
 				B5C3DC0A26220EDF00FA1865 /* ViewController.swift in Sources */,
+				B5C3DC0D262213E300FA1865 /* DetailVC.swift in Sources */,
 				8E10F5D7261C8AB500F63D3D /* AppDelegate.swift in Sources */,
 				8E10F5D9261C8AB500F63D3D /* SceneDelegate.swift in Sources */,
 			);

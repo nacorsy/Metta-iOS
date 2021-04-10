@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SwiftyGif
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
@@ -30,8 +30,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 258
     }
     
+    //ketika click cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+//        tableView.deselectRow(at: indexPath, animated: true)
+        
+        performSegue(withIdentifier: "showMeditationDetailIdentifier", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailVC {
+            destination.meditation = meditations[(tableView.indexPathForSelectedRow?.row)!]
+            destination.title = "\(meditations[(tableView.indexPathForSelectedRow?.row)!].name)"
+        }
+        
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
@@ -42,10 +53,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.detailDescLabel.text = meditations[indexPath.row].caption
         
         
+        // MARK : Konfigurasi Tulisan Current Session Antar Meditasi
         if (indexPath.row == 0){
             cell.detailSessionLabel.text = "Daily"
-            
-            cell.meditationImage.image = UIImage(named: "breathe-meditation")
         }
         else
         {
@@ -55,6 +65,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.detailCard.backgroundColor = UIColor(named: "meditate-bg-\(indexPath.row)")
         cell.imageCard.backgroundColor = UIColor(named: "meditate-fg-\(indexPath.row)")
         
+        do {
+            let gif = try UIImage(gifName: "medi-pic-\(indexPath.row)")
+            cell.meditationImage.setGifImage(gif, loopCount: -1)
+            cell.meditationImage.frame = view.bounds
+        } catch {
+            print(error)
+        }
         return cell
     }
     
