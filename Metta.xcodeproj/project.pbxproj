@@ -16,7 +16,10 @@
 		8E10F5E6261C8AB500F63D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E10F5E4261C8AB500F63D3D /* LaunchScreen.storyboard */; };
 		8EC30D24261EC16B000AE83E /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC30D23261EC16B000AE83E /* Meditation.swift */; };
 		8EC30D27261EC1A2000AE83E /* MeditationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC30D26261EC1A2000AE83E /* MeditationData.swift */; };
+		BF5277372620647000882344 /* TestAjaBangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5277362620647000882344 /* TestAjaBangViewController.swift */; };
+		BF52773A262064A300882344 /* testajabang.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF527739262064A300882344 /* testajabang.storyboard */; };
 		BFAB6428261EC6D200F98711 /* MeditationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB6426261EC6C100F98711 /* MeditationDetailViewController.swift */; };
+		BFAB6436261F1B8500F98711 /* MeditationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFAB6427261EC6C100F98711 /* MeditationDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,8 @@
 		8E3E6E48261C8FFF0079FDB0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8EC30D23261EC16B000AE83E /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
 		8EC30D26261EC1A2000AE83E /* MeditationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationData.swift; sourceTree = "<group>"; };
+		BF5277362620647000882344 /* TestAjaBangViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAjaBangViewController.swift; sourceTree = "<group>"; };
+		BF527739262064A300882344 /* testajabang.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = testajabang.storyboard; sourceTree = "<group>"; };
 		BFAB6426261EC6C100F98711 /* MeditationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDetailViewController.swift; sourceTree = "<group>"; };
 		BFAB6427261EC6C100F98711 /* MeditationDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				BFAB6426261EC6C100F98711 /* MeditationDetailViewController.swift */,
+				BF5277362620647000882344 /* TestAjaBangViewController.swift */,
 				8E10F5DA261C8AB500F63D3D /* ViewController.swift */,
 			);
 			path = Controller;
@@ -91,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				BFAB6427261EC6C100F98711 /* MeditationDetailViewController.xib */,
+				BF527739262064A300882344 /* testajabang.storyboard */,
 				8E10F5DC261C8AB500F63D3D /* Main.storyboard */,
 			);
 			path = View;
@@ -175,6 +182,8 @@
 				8E10F5E6261C8AB500F63D3D /* LaunchScreen.storyboard in Resources */,
 				8E10F5E3261C8AB500F63D3D /* Assets.xcassets in Resources */,
 				8E10F5DE261C8AB500F63D3D /* Main.storyboard in Resources */,
+				BF52773A262064A300882344 /* testajabang.storyboard in Resources */,
+				BFAB6436261F1B8500F98711 /* MeditationDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +199,7 @@
 				8EC30D27261EC1A2000AE83E /* MeditationData.swift in Sources */,
 				8E10F5DB261C8AB500F63D3D /* ViewController.swift in Sources */,
 				8E10F5E1261C8AB500F63D3D /* Metta.xcdatamodeld in Sources */,
+				BF5277372620647000882344 /* TestAjaBangViewController.swift in Sources */,
 				8E10F5D7261C8AB500F63D3D /* AppDelegate.swift in Sources */,
 				8E10F5D9261C8AB500F63D3D /* SceneDelegate.swift in Sources */,
 			);
