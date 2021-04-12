@@ -14,6 +14,8 @@
 		8E10F5E1261C8AB500F63D3D /* Metta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E10F5DF261C8AB500F63D3D /* Metta.xcdatamodeld */; };
 		8E10F5E3261C8AB500F63D3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E10F5E2261C8AB500F63D3D /* Assets.xcassets */; };
 		8E10F5E6261C8AB500F63D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E10F5E4261C8AB500F63D3D /* LaunchScreen.storyboard */; };
+		8E5CB124261F0E6200531E5E /* MeditationTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5CB122261F0E6200531E5E /* MeditationTimerViewController.swift */; };
+		8E5CB125261F0E6200531E5E /* MeditationTimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E5CB123261F0E6200531E5E /* MeditationTimerViewController.xib */; };
 		8EB3A4FA26207A1700D0A6FD /* SwiftyGif in Frameworks */ = {isa = PBXBuildFile; productRef = 8EB3A4F926207A1700D0A6FD /* SwiftyGif */; };
 		8EC30D24261EC16B000AE83E /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC30D23261EC16B000AE83E /* Meditation.swift */; };
 		8EC30D27261EC1A2000AE83E /* MeditationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC30D26261EC1A2000AE83E /* MeditationData.swift */; };
@@ -41,6 +43,8 @@
 		8E10F5E5261C8AB500F63D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E10F5E7261C8AB500F63D3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E3E6E48261C8FFF0079FDB0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8E5CB122261F0E6200531E5E /* MeditationTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationTimerViewController.swift; sourceTree = "<group>"; };
+		8E5CB123261F0E6200531E5E /* MeditationTimerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationTimerViewController.xib; sourceTree = "<group>"; };
 		8EC30D23261EC16B000AE83E /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
 		8EC30D26261EC1A2000AE83E /* MeditationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationData.swift; sourceTree = "<group>"; };
 		BFAB6426261EC6C100F98711 /* MeditationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDetailViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 				BFAB6426261EC6C100F98711 /* MeditationDetailViewController.swift */,
 				B584D49E26202FD90098BE82 /* MeditationCell.swift */,
 				8E10F5DA261C8AB500F63D3D /* ViewController.swift */,
+				8E5CB122261F0E6200531E5E /* MeditationTimerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -112,8 +117,8 @@
 		8E3E6E45261C8F660079FDB0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8E5CB123261F0E6200531E5E /* MeditationTimerViewController.xib */,
 				BFAB6427261EC6C100F98711 /* MeditationDetailViewController.xib */,
-				BF527739262064A300882344 /* testajabang.storyboard */,
 				8E10F5DC261C8AB500F63D3D /* Main.storyboard */,
 			);
 			path = View;
@@ -225,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E5CB125261F0E6200531E5E /* MeditationTimerViewController.xib in Resources */,
 				B584D4A326206BAA0098BE82 /* meditate-animation-1.gif in Resources */,
 				B584D4AB26206BC60098BE82 /* medi-intro.png in Resources */,
 				B584D4A926206BC60098BE82 /* medi-pic-0.gif in Resources */,
@@ -250,10 +256,10 @@
 			files = (
 				BFAB6428261EC6D200F98711 /* MeditationDetailViewController.swift in Sources */,
 				8EC30D24261EC16B000AE83E /* Meditation.swift in Sources */,
+				8E5CB124261F0E6200531E5E /* MeditationTimerViewController.swift in Sources */,
 				8EC30D27261EC1A2000AE83E /* MeditationData.swift in Sources */,
 				8E10F5DB261C8AB500F63D3D /* ViewController.swift in Sources */,
 				8E10F5E1261C8AB500F63D3D /* Metta.xcdatamodeld in Sources */,
-				B584D49F26202FF50098BE82 /* MeditationCell.swift in Sources */,
 				8E10F5D7261C8AB500F63D3D /* AppDelegate.swift in Sources */,
 				8E10F5D9261C8AB500F63D3D /* SceneDelegate.swift in Sources */,
 			);
