@@ -15,6 +15,7 @@ class MeditationTimerViewController: UIViewController {
     @IBOutlet weak var stopBtn: UIButton!
     @IBOutlet weak var soundBtn: UIButton!
     @IBOutlet weak var meditateAnimation: UIImageView!
+    @IBOutlet weak var meditationBg: UIImageView!
     
     var whiteNoiseSound: AVAudioPlayer!
     var meditationSound: AVAudioPlayer!
@@ -28,7 +29,10 @@ class MeditationTimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(named: "Primary Green")
+        self.view.backgroundColor = UIColor(named: "meditate-bg-\(0)")
+        
+        meditationBg.setImage(UIImage(named: "meditate-bg-\(0)") ?? UIImage())
+        meditationBg.alpha = 0.8
         
         stopBtn.layer.cornerRadius = 8
         
@@ -36,10 +40,10 @@ class MeditationTimerViewController: UIViewController {
 
         soundBtn.setImage(speakerIcon, for: .normal)
         
-        let pathWhiteNoiseSound = Bundle.main.path(forResource: "Forest 1m.mp3", ofType: nil)!
+        let pathWhiteNoiseSound = Bundle.main.path(forResource: "Forest 1m", ofType: "mp3")!
         let urlWhiteNoiseSound = URL(fileURLWithPath: pathWhiteNoiseSound)
         
-        let pathMeditationSound = Bundle.main.path(forResource: "Breathe Meditation.m4a", ofType: nil)!
+        let pathMeditationSound = Bundle.main.path(forResource: "meditate-sound-\(0)", ofType: "m4a")!
         let urlMeditationSound = URL(fileURLWithPath: pathMeditationSound)
 
         do {
@@ -57,7 +61,7 @@ class MeditationTimerViewController: UIViewController {
         }
         
         do {
-            let gif = try UIImage(gifName: "Putput meditate.gif")
+            let gif = try UIImage(gifName: "meditate-animation-\(0).gif")
             self.meditateAnimation.setGifImage(gif, loopCount: -1)
         } catch {
             print(error)
