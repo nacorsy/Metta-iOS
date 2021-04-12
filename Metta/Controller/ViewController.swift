@@ -16,7 +16,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        tableView.showsVerticalScrollIndicator = false
+//        tableView.showsVerticalScrollIndicator = false
+        
     }
 
     //menampilkan berapa banyak data yang ingin dimunculkan di table view
