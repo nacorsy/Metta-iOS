@@ -37,6 +37,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         performSegue(withIdentifier: "showMeditationDetailIdentifier", sender: self)
     }
     
+    //Ke page meditation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? DetailVC {
             destination.meditation = meditations[(tableView.indexPathForSelectedRow?.row)!]
@@ -65,6 +66,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.detailCard.backgroundColor = UIColor(named: "meditate-bg-\(indexPath.row)")
         cell.imageCard.backgroundColor = UIColor(named: "meditate-fg-\(indexPath.row)")
         
+        //pasang gif
         do {
             let gif = try UIImage(gifName: "medi-pic-\(indexPath.row)")
             cell.meditationImage.setGifImage(gif, loopCount: -1)
