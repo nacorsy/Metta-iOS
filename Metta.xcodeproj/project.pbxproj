@@ -19,6 +19,8 @@
 		8EB3A4FA26207A1700D0A6FD /* SwiftyGif in Frameworks */ = {isa = PBXBuildFile; productRef = 8EB3A4F926207A1700D0A6FD /* SwiftyGif */; };
 		8EC30D24261EC16B000AE83E /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC30D23261EC16B000AE83E /* Meditation.swift */; };
 		8EC30D27261EC1A2000AE83E /* MeditationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC30D26261EC1A2000AE83E /* MeditationData.swift */; };
+		BF5277372620647000882344 /* TestAjaBangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5277362620647000882344 /* TestAjaBangViewController.swift */; };
+		BF52773A262064A300882344 /* testajabang.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF527739262064A300882344 /* testajabang.storyboard */; };
 		BFAB6428261EC6D200F98711 /* MeditationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB6426261EC6C100F98711 /* MeditationDetailViewController.swift */; };
 		BFAB6436261F1B8500F98711 /* MeditationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFAB6427261EC6C100F98711 /* MeditationDetailViewController.xib */; };
 		B584D49F26202FF50098BE82 /* MeditationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584D49E26202FD90098BE82 /* MeditationCell.swift */; };
@@ -47,6 +49,8 @@
 		8E5CB123261F0E6200531E5E /* MeditationTimerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationTimerViewController.xib; sourceTree = "<group>"; };
 		8EC30D23261EC16B000AE83E /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
 		8EC30D26261EC1A2000AE83E /* MeditationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationData.swift; sourceTree = "<group>"; };
+		BF5277362620647000882344 /* TestAjaBangViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAjaBangViewController.swift; sourceTree = "<group>"; };
+		BF527739262064A300882344 /* testajabang.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = testajabang.storyboard; sourceTree = "<group>"; };
 		BFAB6426261EC6C100F98711 /* MeditationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDetailViewController.swift; sourceTree = "<group>"; };
 		BFAB6427261EC6C100F98711 /* MeditationDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationDetailViewController.xib; sourceTree = "<group>"; };
 		B584D49E26202FD90098BE82 /* MeditationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationCell.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 			children = (
 				8E5CB123261F0E6200531E5E /* MeditationTimerViewController.xib */,
 				BFAB6427261EC6C100F98711 /* MeditationDetailViewController.xib */,
+				BF527739262064A300882344 /* testajabang.storyboard */,
 				8E10F5DC261C8AB500F63D3D /* Main.storyboard */,
 			);
 			path = View;
