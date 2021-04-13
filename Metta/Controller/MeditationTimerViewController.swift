@@ -16,6 +16,7 @@ class MeditationTimerViewController: UIViewController {
     @IBOutlet weak var soundBtn: UIButton!
     @IBOutlet weak var meditateAnimation: UIImageView!
     @IBOutlet weak var meditationBg: UIImageView!
+    @IBOutlet weak var cheatBtn: UIButton!
     
     var whiteNoiseSound: AVAudioPlayer!
     var meditationSound: AVAudioPlayer!
@@ -26,13 +27,21 @@ class MeditationTimerViewController: UIViewController {
     var runCount = 5
     var timer = Timer()
     
+    var meditationIndexPath = 0
+    
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(named: "meditate-bg-\(0)")
+        cheatBtn.alpha = 0.1
         
-        meditationBg.setImage(UIImage(named: "meditate-bg-\(0)") ?? UIImage())
-        meditationBg.alpha = 0.8
+        self.view.backgroundColor = UIColor(named: "meditate-fg-\(meditationIndexPath)")
+        
+        print("meditate-bg-\(meditationIndexPath)")
+        
+        meditationBg.setImage(UIImage(named: "meditate-bg-\(meditationIndexPath)") ?? UIImage())
+        meditationBg.alpha = 0.5
         
         stopBtn.layer.cornerRadius = 8
         
@@ -43,7 +52,7 @@ class MeditationTimerViewController: UIViewController {
         let pathWhiteNoiseSound = Bundle.main.path(forResource: "Forest 1m", ofType: "mp3")!
         let urlWhiteNoiseSound = URL(fileURLWithPath: pathWhiteNoiseSound)
         
-        let pathMeditationSound = Bundle.main.path(forResource: "meditate-sound-\(0)", ofType: "m4a")!
+        let pathMeditationSound = Bundle.main.path(forResource: "meditate-sound-\(meditationIndexPath)", ofType: "m4a")!
         let urlMeditationSound = URL(fileURLWithPath: pathMeditationSound)
 
         do {
@@ -61,7 +70,7 @@ class MeditationTimerViewController: UIViewController {
         }
         
         do {
-            let gif = try UIImage(gifName: "meditate-animation-\(0).gif")
+            let gif = try UIImage(gifName: "meditate-animation-\(meditationIndexPath)")
             self.meditateAnimation.setGifImage(gif, loopCount: -1)
         } catch {
             print(error)
@@ -111,6 +120,30 @@ class MeditationTimerViewController: UIViewController {
         unmute = !unmute
     }
     
+    @IBAction func cheatBtnPressed(_ sender: UIButton) {
+        timer.invalidate()
+        meditationSound.stop()
+        whiteNoiseSound.stop()
+        
+        
+        
+        if !meditations[meditationIndexPath].isDaily {
+            if (meditations[meditationIndexPath].currentSession < meditations[meditationIndexPath].totalSession) {
+                meditations[meditationIndexPath].currentSession += 1
+                defaults.set(try? PropertyListEncoder().encode(meditations), forKey:"Meditation")
+            } else {
+                meditations[meditationIndexPath].currentSession = 0
+                defaults.setValue(meditations, forKey: "Meditation")
+            }
+        }
+        
+        let congratulationVC = CongratulationViewController(nibName: "CongratulationViewController", bundle: nil)
+        congratulationVC.modalPresentationStyle = .fullScreen
+        
+        self.present(congratulationVC, animated: true, completion: nil)
+    }
+    
+    
     @objc func timerCounter() {
         runCount -= 1
         
@@ -122,6 +155,18 @@ class MeditationTimerViewController: UIViewController {
             timer.invalidate()
             meditationSound.stop()
             whiteNoiseSound.stop()
+            
+            if !meditations[meditationIndexPath].isDaily {
+                meditations[meditationIndexPath].currentSession += 1
+                
+                if (meditations[meditationIndexPath].currentSession < meditations[meditationIndexPath].totalSession) {
+                    defaults.setValue(meditations, forKey: "Meditation")
+                } else {
+                    defaults.setValue(meditations, forKey: "Meditation")
+                }
+            }
+            
+                
             let congratulationVC = CongratulationViewController(nibName: "CongratulationViewController", bundle: nil)
             congratulationVC.modalPresentationStyle = .fullScreen
             
@@ -139,8 +184,6 @@ class MeditationTimerViewController: UIViewController {
             timeString += String(format: "%02d", minutes)
             timeString += ":"
             timeString += String(format: "%02d", seconds)
-        
-            print(timeString)
         
             return timeString
     }
