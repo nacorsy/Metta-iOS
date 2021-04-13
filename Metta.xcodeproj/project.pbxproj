@@ -12,6 +12,8 @@
 		8E10F5E1261C8AB500F63D3D /* Metta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E10F5DF261C8AB500F63D3D /* Metta.xcdatamodeld */; };
 		8E10F5E3261C8AB500F63D3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E10F5E2261C8AB500F63D3D /* Assets.xcassets */; };
 		8E10F5E6261C8AB500F63D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E10F5E4261C8AB500F63D3D /* LaunchScreen.storyboard */; };
+		8E2F2B202625AE630054D49B /* CongratulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F2B1E2625AE630054D49B /* CongratulationViewController.swift */; };
+		8E2F2B212625AE630054D49B /* CongratulationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E2F2B1F2625AE630054D49B /* CongratulationViewController.xib */; };
 		8E5CB124261F0E6200531E5E /* MeditationTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5CB122261F0E6200531E5E /* MeditationTimerViewController.swift */; };
 		8E5CB125261F0E6200531E5E /* MeditationTimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E5CB123261F0E6200531E5E /* MeditationTimerViewController.xib */; };
 		8EB3A4FA26207A1700D0A6FD /* SwiftyGif in Frameworks */ = {isa = PBXBuildFile; productRef = 8EB3A4F926207A1700D0A6FD /* SwiftyGif */; };
@@ -41,6 +43,8 @@
 		8E10F5E2261C8AB500F63D3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E10F5E5261C8AB500F63D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E10F5E7261C8AB500F63D3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E2F2B1E2625AE630054D49B /* CongratulationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationViewController.swift; sourceTree = "<group>"; };
+		8E2F2B1F2625AE630054D49B /* CongratulationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CongratulationViewController.xib; sourceTree = "<group>"; };
 		8E3E6E48261C8FFF0079FDB0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8E5CB122261F0E6200531E5E /* MeditationTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationTimerViewController.swift; sourceTree = "<group>"; };
 		8E5CB123261F0E6200531E5E /* MeditationTimerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationTimerViewController.xib; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				B5C3DC0926220EDF00FA1865 /* ViewController.swift */,
 				B5C3DBE52621781000FA1865 /* MeditationCell.swift */,
 				BFAB6426261EC6C100F98711 /* MeditationDetailViewController.swift */,
+				8E2F2B1E2625AE630054D49B /* CongratulationViewController.swift */,
+				8E10F5DA261C8AB500F63D3D /* ViewController.swift */,
 				8E5CB122261F0E6200531E5E /* MeditationTimerViewController.swift */,
 			);
 			path = Controller;
@@ -120,6 +126,10 @@
 		8E3E6E45261C8F660079FDB0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8E5CB123261F0E6200531E5E /* MeditationTimerViewController.xib */,
+				BFAB6427261EC6C100F98711 /* MeditationDetailViewController.xib */,
+				8E2F2B1F2625AE630054D49B /* CongratulationViewController.xib */,
+				8E10F5DC261C8AB500F63D3D /* Main.storyboard */,
 				B5C3DBE92621782A00FA1865 /* Main.storyboard */,
 				8E5CB123261F0E6200531E5E /* MeditationTimerViewController.xib */,
 				BFAB6427261EC6C100F98711 /* MeditationDetailViewController.xib */,
@@ -244,7 +254,9 @@
 				8E10F5E6261C8AB500F63D3D /* LaunchScreen.storyboard in Resources */,
 				B584D4B526206CB90098BE82 /* meditate-sound-0.m4a in Resources */,
 				8E10F5E3261C8AB500F63D3D /* Assets.xcassets in Resources */,
+				8E2F2B212625AE630054D49B /* CongratulationViewController.xib in Resources */,
 				B584D4B126206C740098BE82 /* Forest 1m.mp3 in Resources */,
+				8E10F5DE261C8AB500F63D3D /* Main.storyboard in Resources */,
 				BFAB6436261F1B8500F98711 /* MeditationDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +271,7 @@
 				BFAB6428261EC6D200F98711 /* MeditationDetailViewController.swift in Sources */,
 				8EC30D24261EC16B000AE83E /* Meditation.swift in Sources */,
 				8E5CB124261F0E6200531E5E /* MeditationTimerViewController.swift in Sources */,
+				8E2F2B202625AE630054D49B /* CongratulationViewController.swift in Sources */,
 				8EC30D27261EC1A2000AE83E /* MeditationData.swift in Sources */,
 				8E10F5E1261C8AB500F63D3D /* Metta.xcdatamodeld in Sources */,
 				B5C3DBE62621781000FA1865 /* MeditationCell.swift in Sources */,

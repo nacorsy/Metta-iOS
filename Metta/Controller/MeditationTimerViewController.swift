@@ -23,8 +23,8 @@ class MeditationTimerViewController: UIViewController {
     let largeConfig = UIImage.SymbolConfiguration(pointSize: 140, weight: .bold, scale: .large)
     var unmute = true
     
-    var runCount = 60
-    var timer:Timer = Timer()
+    var runCount = 5
+    var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -120,7 +120,12 @@ class MeditationTimerViewController: UIViewController {
         
         if runCount == 0 {
             timer.invalidate()
-            self.dismiss(animated: false, completion: nil)
+            meditationSound.stop()
+            whiteNoiseSound.stop()
+            let congratulationVC = CongratulationViewController(nibName: "CongratulationViewController", bundle: nil)
+            congratulationVC.modalPresentationStyle = .fullScreen
+            
+            self.present(congratulationVC, animated: true, completion: nil)
         }
     }
     
