@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftyGif
 
 class MeditationDetailViewController: UIViewController{
 
@@ -16,6 +17,11 @@ class MeditationDetailViewController: UIViewController{
     
     @IBOutlet weak var pickerHolderView: UIView!
     @IBOutlet weak var heightHolderConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var backgroundViewMeditationDetail: UIView!
+    @IBOutlet weak var titleLabelMeditationDetail: UILabel!
+    @IBOutlet weak var sessionLabelMeditationDetail: UILabel!
+    @IBOutlet weak var imageViewGif: UIImageView!
     
     var dummyData = meditations
     
@@ -41,6 +47,13 @@ class MeditationDetailViewController: UIViewController{
         timePickedLabel.isUserInteractionEnabled = true
         
         defaultPickerHolderViewHeight = heightHolderConstraint.constant
+        
+        do{
+            let gif = try UIImage(gifName: "medi-pic-0.gif")
+            self.imageViewGif.setGifImage(gif, loopCount: -1)
+        }catch{
+            print(error)
+        }
     }
 
     
