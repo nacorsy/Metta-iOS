@@ -9,7 +9,6 @@ import UIKit
 import SwiftyGif
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
@@ -17,9 +16,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view.
         
 //        tableView.showsVerticalScrollIndicator = false
+
         
     }
 
+    //hide navigation bar di home-page, dan munculin navigation bar di VC lain
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     //menampilkan berapa banyak data yang ingin dimunculkan di table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -34,18 +45,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //ketika click cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        tableView.deselectRow(at: indexPath, animated: true)
-        
-        performSegue(withIdentifier: "showMeditationDetailIdentifier", sender: self)
     }
     
     //Ke page meditation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? DetailVC {
-            destination.meditation = meditations[(tableView.indexPathForSelectedRow?.row)!]
-            destination.title = "\(meditations[(tableView.indexPathForSelectedRow?.row)!].name)"
-        }
-        
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let destination = segue.destination as? DetailVC {
+//            destination.meditation = meditations[(tableView.indexPathForSelectedRow?.row)!]
+//            destination.title = "\(meditations[(tableView.indexPathForSelectedRow?.row)!].name)"
+//        }
+//
+//    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         //minta tableView untuk menampilkan cell dari cell yang sudah dibuat dengan identifier ... di lokasi index TableView berupa indexPath. dan cell ini kepemilikan dari MeditationCell
