@@ -11,9 +11,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
 
-
+    @IBAction func btnPressed(_ sender: UIButton) {
+        let meditationTimerVC = MeditationTimerViewController(nibName: "MeditationTimerViewController", bundle: nil)
+        meditationTimerVC.modalPresentationStyle = .fullScreen
+        
+        self.present(meditationTimerVC, animated: true, completion: nil)
+    }
+    
 }
 
