@@ -14,6 +14,7 @@ class MeditationDetailViewController: UIViewController{
     @IBOutlet weak var buttonPlayAttrib: UIButton!
     @IBOutlet weak var timePicker: UIPickerView!
     @IBOutlet weak var timePickedLabel: UILabel!
+    @IBOutlet weak var minDurationLabel: UILabel!
     
     @IBOutlet weak var pickerHolderView: UIView!
     @IBOutlet weak var heightHolderConstraint: NSLayoutConstraint!
@@ -23,9 +24,12 @@ class MeditationDetailViewController: UIViewController{
     @IBOutlet weak var sessionLabelMeditationDetail: UILabel!
     @IBOutlet weak var imageViewGif: UIImageView!
     
-    var dummyData = meditations
+    var meditationIndexPath = 0
+    var selectedDuration = 5
     
-    let timeArray = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130, 135, 140, 145, 150, 155, 160, 165, 170, 175, 180]
+    let largeConfig = UIImage.SymbolConfiguration(pointSize: 140, weight: .bold, scale: .large)
+    
+    var timeArray = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130, 135, 140, 145, 150, 155, 160, 165, 170, 175, 180]
     
     var defaultPickerHolderViewHeight: CGFloat = 0.0
     let animationDruation = 0.3
@@ -33,23 +37,56 @@ class MeditationDetailViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        initTimerPickerArray()
+        
+        selectedDuration = timeArray[0]
+        
+        timePickedLabel.text = String(timeArray[0]) + " mins"
+        
+        self.title = "Meditation Detail"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(named: "Text Color Light Background") ?? UIColor.white]
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "Text Color Light Background")
+        
+        titleLabelMeditationDetail.text = meditations[meditationIndexPath].name
+        
+        minDurationLabel.text = String(meditations[meditationIndexPath].minDuration) + " mins"
+        
         timePicker.dataSource = self
         timePicker.delegate = self
-
-        descriptionLabel.text = dummyData[1].description
-        timePicker.selectRow(5, inComponent: 0, animated: true)
         
-        buttonPlayAttrib.imageView?.contentMode = .scaleToFill
-        buttonPlayAttrib.imageEdgeInsets = UIEdgeInsets(top: 30, left: 37, bottom: 48, right: 30)
+        backgroundViewMeditationDetail.backgroundColor = UIColor(named: "meditate-fg-\(meditationIndexPath)")
+
+        descriptionLabel.text = meditations[meditationIndexPath].description
+        timePicker.selectRow(0, inComponent: 0, animated: true)
+        
+        if (meditations[meditationIndexPath].isDaily) {
+            sessionLabelMeditationDetail.text = "Daily Session"
+        } else {
+            sessionLabelMeditationDetail.text = "\(meditations[meditationIndexPath].totalSession) Sessions"
+        }
+        
+//        buttonPlayAttrib.imageView?.contentMode = .scaleToFill
+//        buttonPlayAttrib.imageEdgeInsets = UIEdgeInsets(top: 30, left: 37, bottom: 48, right: 30)
+        
+        let playIcon = UIImage(systemName: "play.fill", withConfiguration: largeConfig)
+        
+        buttonPlayAttrib.setImage(playIcon, for: .normal)
+        
+//        defaultPickerHolderViewHeight = heightHolderConstraint.constant
+
         
         let tapShow = UITapGestureRecognizer(target: self, action: #selector(tapFunction(gestureRecognizer:)))
         timePickedLabel.addGestureRecognizer(tapShow)
         timePickedLabel.isUserInteractionEnabled = true
         
-        defaultPickerHolderViewHeight = heightHolderConstraint.constant
         
         do{
-            let gif = try UIImage(gifName: "medi-pic-0.gif")
+            let gif = try UIImage(gifName: "medi-pic-\(meditationIndexPath)")
             self.imageViewGif.setGifImage(gif, loopCount: -1)
         }catch{
             print(error)
@@ -76,7 +113,7 @@ class MeditationDetailViewController: UIViewController{
         //      set it to 0
         // else
         //      set it to defaultPickerHolderViewHeight
-        self.heightHolderConstraint.constant = self.heightHolderConstraint.constant > 0 ? 0 : defaultPickerHolderViewHeight
+//        self.heightHolderConstraint.constant = self.heightHolderConstraint.constant > 0 ? 0 : defaultPickerHolderViewHeight
 
         // animate the change
         UIView.animate(withDuration: animationDruation, animations: {
@@ -93,10 +130,17 @@ class MeditationDetailViewController: UIViewController{
     
     //button passing data to timer page
     @IBAction func buttonPlay(_ sender: UIButton) {
-        let timePicked = timePicker.selectedRow(inComponent: 0)
-        let timePickedAdd = (timePicked * 5) + 5
+        let meditationTimerVC = MeditationTimerViewController(nibName: "MeditationTimerViewController", bundle: nil)
+        meditationTimerVC.runCount = selectedDuration * 60
+        meditationTimerVC.meditationIndexPath = meditationIndexPath
+        meditationTimerVC.modalPresentationStyle = .fullScreen
         
-        print(timePickedAdd)
+        self.present(meditationTimerVC, animated: true, completion: nil)
+    }
+    
+    func initTimerPickerArray() {
+        guard let firstIndex = timeArray.firstIndex(of: meditations[meditationIndexPath].minDuration) else { return }
+        timeArray = Array(timeArray[firstIndex ..< timeArray.count])
     }
     
 }
@@ -112,6 +156,8 @@ extension MeditationDetailViewController: UIPickerViewDataSource{
     
 }
 
+
+
 extension MeditationDetailViewController: UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         let testAja = timeArray[row]
@@ -120,8 +166,9 @@ extension MeditationDetailViewController: UIPickerViewDelegate{
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let timePicked = pickerView.selectedRow(inComponent: component)
-        let timePickedAdd = (timePicked * 5) + 5
         
-        timePickedLabel.text = "\(timePickedAdd) min"
+        selectedDuration = timeArray[timePicked]
+        
+        timePickedLabel.text = "\(selectedDuration) min"
     }
 }
