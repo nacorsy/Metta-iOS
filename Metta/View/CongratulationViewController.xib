@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CongratulationViewController" customModule="Metta" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meditate-bg-0" translatesAutoresizingMaskIntoConstraints="NO" id="F11-p2-7f1">
+                    <rect key="frame" x="-170" y="111" width="730" height="622"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="730" id="FsS-pA-NAO"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You did it!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9j-G2-7WC">
+                    <rect key="frame" x="117" y="223" width="156" height="41"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                    <color key="textColor" name="Text Color Dynamic Background"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="medi-intro" translatesAutoresizingMaskIntoConstraints="NO" id="Vsb-lJ-hsg">
+                    <rect key="frame" x="45" y="272" width="300" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="GFE-7c-CMr"/>
+                        <constraint firstAttribute="height" constant="300" id="aJA-1N-bPA"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="meditate-bg-0"/>
+            <constraints>
+                <constraint firstItem="F11-p2-7f1" firstAttribute="centerX" secondItem="Vsb-lJ-hsg" secondAttribute="centerX" id="4gM-3q-m3r"/>
+                <constraint firstItem="F11-p2-7f1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="67" id="9a7-bl-6Rc"/>
+                <constraint firstItem="Vsb-lJ-hsg" firstAttribute="top" secondItem="M9j-G2-7WC" secondAttribute="bottom" constant="8" id="E8M-Mr-BZW"/>
+                <constraint firstItem="Vsb-lJ-hsg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Nlt-GE-J6g"/>
+                <constraint firstItem="Vsb-lJ-hsg" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="WmK-bi-9JA"/>
+                <constraint firstItem="F11-p2-7f1" firstAttribute="centerY" secondItem="Vsb-lJ-hsg" secondAttribute="centerY" id="mOk-h7-bmX"/>
+                <constraint firstItem="M9j-G2-7WC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wOY-XK-N7I"/>
+            </constraints>
+            <point key="canvasLocation" x="95.652173913043484" y="140.625"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="medi-intro" width="2048" height="2048"/>
+        <image name="meditate-bg-0" width="230" height="213"/>
+        <namedColor name="Text Color Dynamic Background">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.69999998807907104" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="meditate-bg-0">
+            <color red="0.3843137254901961" green="0.70980392156862748" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
