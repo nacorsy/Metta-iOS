@@ -7,12 +7,13 @@
 
 import Foundation
 
-struct Meditation {
+struct Meditation: Codable {
     let id: Int
     let name: String
     let caption: String
     let description: String
-    let audioFile: String
+    let isDaily: Bool
     let totalSession: Int
     var currentSession: Int
+    let minDuration: Int
 }
