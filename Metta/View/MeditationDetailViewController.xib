@@ -11,12 +11,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MeditationDetailViewController" customModule="Metta" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundViewMeditationDetail" destination="drs-IH-k6J" id="yPI-y0-8fR"/>
                 <outlet property="buttonPlayAttrib" destination="bfg-sp-O6v" id="Hgb-60-3Eq"/>
                 <outlet property="descriptionLabel" destination="6uT-kk-ECC" id="uag-ov-sTb"/>
                 <outlet property="heightHolderConstraint" destination="cVY-Pi-JxX" id="gVt-XF-qQG"/>
+                <outlet property="imageViewGif" destination="GDH-r4-wgj" id="LuD-Ab-juV"/>
                 <outlet property="pickerHolderView" destination="sej-IN-JEL" id="lxp-hT-GIe"/>
+                <outlet property="sessionLabelMeditationDetail" destination="AVX-i4-JU4" id="4CF-05-cXj"/>
                 <outlet property="timePickedLabel" destination="bVZ-dO-4UM" id="42k-hL-c3q"/>
                 <outlet property="timePicker" destination="xHk-ZX-MCg" id="xKQ-Df-dzN"/>
+                <outlet property="titleLabelMeditationDetail" destination="Ouk-Zs-fbR" id="CA5-41-Bfd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -40,9 +44,12 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="breath-meditationdetail" translatesAutoresizingMaskIntoConstraints="NO" id="GDH-r4-wgj">
-                            <rect key="frame" x="119" y="31" width="152" height="163"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GDH-r4-wgj">
+                            <rect key="frame" x="58" y="-34.333333333333343" width="274" height="293"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="274" id="vhK-OA-vFU"/>
+                                <constraint firstAttribute="height" constant="293" id="zVx-t8-y6G"/>
+                            </constraints>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" name="Primary Dark Green"/>
@@ -55,6 +62,8 @@
                         <constraint firstAttribute="bottom" secondItem="AVX-i4-JU4" secondAttribute="bottom" constant="29" id="cL7-Hs-R17"/>
                         <constraint firstItem="Ouk-Zs-fbR" firstAttribute="leading" secondItem="drs-IH-k6J" secondAttribute="leading" constant="32" id="dC7-YR-0J6"/>
                         <constraint firstAttribute="trailing" secondItem="Ouk-Zs-fbR" secondAttribute="trailing" constant="197" id="ev5-co-aBV"/>
+                        <constraint firstItem="GDH-r4-wgj" firstAttribute="centerY" secondItem="drs-IH-k6J" secondAttribute="centerY" id="kmA-Da-2Lm"/>
+                        <constraint firstItem="GDH-r4-wgj" firstAttribute="centerX" secondItem="drs-IH-k6J" secondAttribute="centerX" id="zge-Si-ZqS"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 mins" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlB-F2-Q0a">
@@ -169,7 +178,6 @@ our intuition. TEST !@#</string>
         </view>
     </objects>
     <resources>
-        <image name="breath-meditationdetail" width="159" height="170"/>
         <image name="clock.fill" catalog="system" width="128" height="121"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
         <namedColor name="Primary Blue">
