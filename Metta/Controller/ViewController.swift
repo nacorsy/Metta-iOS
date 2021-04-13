@@ -10,6 +10,8 @@ import SwiftyGif
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
+    
+    let defaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,13 +19,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
 //        tableView.showsVerticalScrollIndicator = false
 
-        
+        if let data = UserDefaults.standard.value(forKey:"Meditation") as? Data {
+            meditations = try! PropertyListDecoder().decode(Array<Meditation>.self, from: data)
+        }
     }
 
     //hide navigation bar di home-page, dan munculin navigation bar di VC lain
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        tableView.reloadData()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -45,6 +50,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //ketika click cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        tableView.deselectRow(at: indexPath, animated: true)
+        let meditationDetailVC = MeditationDetailViewController(nibName: "MeditationDetailViewController", bundle: nil)
+        meditationDetailVC.meditationIndexPath = indexPath.row
+        
+        self.navigationController?.pushViewController(meditationDetailVC, animated: true)
     }
     
     //Ke page meditation
