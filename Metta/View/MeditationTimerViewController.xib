@@ -46,7 +46,7 @@
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOK-Mu-8Ci">
                     <rect key="frame" x="156.5" y="680.5" width="101" height="52"/>
-                    <color key="backgroundColor" red="0.71579533819999996" green="0.17913469670000001" blue="0.27450364830000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" red="0.71764705882352942" green="0.18431372549019609" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="52" id="53z-KH-v9x"/>
                         <constraint firstAttribute="width" constant="101" id="ny6-w2-h0N"/>
@@ -106,7 +106,7 @@
         <image name="meditate-bg-1" width="230" height="214"/>
         <image name="speaker.wave.2.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="meditate-fg-0">
-            <color red="0.21176470588235294" green="0.41960784313725491" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.22745098039215686" green="0.49411764705882355" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

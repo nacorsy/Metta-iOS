@@ -13,11 +13,10 @@ class MeditationDetailViewController: UIViewController{
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var buttonPlayAttrib: UIButton!
     @IBOutlet weak var timePicker: UIPickerView!
-    @IBOutlet weak var timePickedLabel: UILabel!
+    @IBOutlet weak var timePickedLabel: UIButton!
     @IBOutlet weak var minDurationLabel: UILabel!
     
     @IBOutlet weak var pickerHolderView: UIView!
-    @IBOutlet weak var heightHolderConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var backgroundViewMeditationDetail: UIView!
     @IBOutlet weak var titleLabelMeditationDetail: UILabel!
@@ -36,12 +35,21 @@ class MeditationDetailViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         initTimerPickerArray()
+        
+        //Corner radius view meditation detail
+        backgroundViewMeditationDetail.layer.cornerRadius = 14
+        backgroundViewMeditationDetail.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        
+        
+        //picker
+        pickerHolderView.isHidden = true
+        
+        
         
         selectedDuration = timeArray[0]
         
-        timePickedLabel.text = String(timeArray[0]) + " mins"
+        timePickedLabel.setTitle(String(timeArray[0]) + " mins", for: .normal)
         
         self.title = "Meditation Detail"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(named: "Text Color Light Background") ?? UIColor.white]
@@ -91,6 +99,13 @@ class MeditationDetailViewController: UIViewController{
         }catch{
             print(error)
         }
+        
+        
+        
+        
+        
+        
+        
     }
 
     
@@ -169,6 +184,6 @@ extension MeditationDetailViewController: UIPickerViewDelegate{
         
         selectedDuration = timeArray[timePicked]
         
-        timePickedLabel.text = "\(selectedDuration) min"
+        timePickedLabel.setTitle("\(selectedDuration) min", for: .normal)
     }
 }
