@@ -10,7 +10,7 @@ import SwiftyGif
 import AVFoundation
 
 class MeditationTimerViewController: UIViewController {
-
+    
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var stopBtn: UIButton!
     @IBOutlet weak var soundBtn: UIButton!
@@ -46,7 +46,7 @@ class MeditationTimerViewController: UIViewController {
         stopBtn.layer.cornerRadius = 8
         
         let speakerIcon = UIImage(systemName: "speaker.wave.2.circle.fill", withConfiguration: largeConfig)
-
+        
         soundBtn.setImage(speakerIcon, for: .normal)
         
         let pathWhiteNoiseSound = Bundle.main.path(forResource: "Forest 1m", ofType: "mp3")!
@@ -54,7 +54,7 @@ class MeditationTimerViewController: UIViewController {
         
         let pathMeditationSound = Bundle.main.path(forResource: "meditate-sound-\(meditationIndexPath)", ofType: "m4a")!
         let urlMeditationSound = URL(fileURLWithPath: pathMeditationSound)
-
+        
         do {
             whiteNoiseSound = try AVAudioPlayer(contentsOf: urlWhiteNoiseSound)
             whiteNoiseSound.volume = 0.3
@@ -82,14 +82,14 @@ class MeditationTimerViewController: UIViewController {
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
     }
-
+    
     @IBAction func stopBtnPressed(_ sender: UIButton) {
         timer.invalidate()
         
         meditationSound.pause()
         
         let alert = UIAlertController(title: "Are you sure?", message: "If you stop, you have to restart this session.", preferredStyle: .alert)
-
+        
         
         alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
             self.dismiss(animated: false, completion: nil)
@@ -99,7 +99,7 @@ class MeditationTimerViewController: UIViewController {
             self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.timerCounter), userInfo: nil, repeats: true)
             self.meditationSound.play()
         }))
-
+        
         self.present(alert, animated: true)
         
     }
@@ -108,12 +108,12 @@ class MeditationTimerViewController: UIViewController {
         var speakerIcon: UIImage
         if unmute {
             speakerIcon = UIImage(systemName: "speaker.slash.circle.fill", withConfiguration: largeConfig) ?? UIImage()
-
+            
             soundBtn.setImage(speakerIcon, for: .normal)
             whiteNoiseSound.pause()
         } else {
             speakerIcon = UIImage(systemName: "speaker.wave.2.circle.fill", withConfiguration: largeConfig) ?? UIImage()
-
+            
             soundBtn.setImage(speakerIcon, for: .normal)
             whiteNoiseSound.play()
         }
@@ -128,12 +128,12 @@ class MeditationTimerViewController: UIViewController {
         
         
         if !meditations[meditationIndexPath].isDaily {
-            if (meditations[meditationIndexPath].currentSession < meditations[meditationIndexPath].totalSession) {
+            if (meditations[meditationIndexPath].currentSession < (meditations[meditationIndexPath].totalSession - 1) ) {
                 meditations[meditationIndexPath].currentSession += 1
                 defaults.set(try? PropertyListEncoder().encode(meditations), forKey:"Meditation")
             } else {
                 meditations[meditationIndexPath].currentSession = 0
-                defaults.setValue(meditations, forKey: "Meditation")
+                defaults.set(try? PropertyListEncoder().encode(meditations), forKey:"Meditation")
             }
         }
         
@@ -166,7 +166,6 @@ class MeditationTimerViewController: UIViewController {
                 }
             }
             
-                
             let congratulationVC = CongratulationViewController(nibName: "CongratulationViewController", bundle: nil)
             congratulationVC.modalPresentationStyle = .fullScreen
             
@@ -179,12 +178,12 @@ class MeditationTimerViewController: UIViewController {
     }
     
     func makeTimeString(minutes: Int, seconds : Int) -> String {
-            var timeString = ""
-    
-            timeString += String(format: "%02d", minutes)
-            timeString += ":"
-            timeString += String(format: "%02d", seconds)
+        var timeString = ""
         
-            return timeString
+        timeString += String(format: "%02d", minutes)
+        timeString += ":"
+        timeString += String(format: "%02d", seconds)
+        
+        return timeString
     }
 }

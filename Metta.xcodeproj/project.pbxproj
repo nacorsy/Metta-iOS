@@ -27,10 +27,13 @@
 		B584D4B126206C740098BE82 /* Forest 1m.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B584D4B026206C740098BE82 /* Forest 1m.mp3 */; };
 		B584D4B526206CB90098BE82 /* meditate-sound-0.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B584D4B326206CA30098BE82 /* meditate-sound-0.m4a */; };
 		B584D4B726206CBC0098BE82 /* meditate-sound-1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B584D4B426206CA40098BE82 /* meditate-sound-1.m4a */; };
+		B59090E126275C6F00628F63 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59090E026275C6F00628F63 /* LoadingViewController.swift */; };
+		B59090E726275D5A00628F63 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59090E526275D5A00628F63 /* StorageManager.swift */; };
+		B59090E826275D5A00628F63 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59090E626275D5A00628F63 /* NavigationManager.swift */; };
 		B5C3DBE62621781000FA1865 /* MeditationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C3DBE52621781000FA1865 /* MeditationCell.swift */; };
 		B5C3DBEA2621782A00FA1865 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C3DBE92621782A00FA1865 /* Main.storyboard */; };
 		B5C3DC0A26220EDF00FA1865 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C3DC0926220EDF00FA1865 /* ViewController.swift */; };
-		B5D34F89262558FB00E04E01 /* onboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D34F88262558FB00E04E01 /* onboardingViewController.swift */; };
+		B5D34F89262558FB00E04E01 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D34F88262558FB00E04E01 /* OnboardingViewController.swift */; };
 		BFAB6428261EC6D200F98711 /* MeditationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB6426261EC6C100F98711 /* MeditationDetailViewController.swift */; };
 		BFAB6436261F1B8500F98711 /* MeditationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFAB6427261EC6C100F98711 /* MeditationDetailViewController.xib */; };
 /* End PBXBuildFile section */
@@ -58,10 +61,13 @@
 		B584D4B026206C740098BE82 /* Forest 1m.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Forest 1m.mp3"; sourceTree = "<group>"; };
 		B584D4B326206CA30098BE82 /* meditate-sound-0.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "meditate-sound-0.m4a"; sourceTree = "<group>"; };
 		B584D4B426206CA40098BE82 /* meditate-sound-1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "meditate-sound-1.m4a"; sourceTree = "<group>"; };
+		B59090E026275C6F00628F63 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingViewController.swift; path = "../../../MC 1/Metta-iOS 1.1/Metta/Controller/LoadingViewController.swift"; sourceTree = "<group>"; };
+		B59090E526275D5A00628F63 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		B59090E626275D5A00628F63 /* NavigationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		B5C3DBE52621781000FA1865 /* MeditationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationCell.swift; sourceTree = "<group>"; };
 		B5C3DBE92621782A00FA1865 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B5C3DC0926220EDF00FA1865 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B5D34F88262558FB00E04E01 /* onboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = onboardingViewController.swift; path = Metta/View/onboardingViewController.swift; sourceTree = SOURCE_ROOT; };
+		B5D34F88262558FB00E04E01 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = Metta/View/OnboardingViewController.swift; sourceTree = SOURCE_ROOT; };
 		BFAB6426261EC6C100F98711 /* MeditationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDetailViewController.swift; sourceTree = "<group>"; };
 		BFAB6427261EC6C100F98711 /* MeditationDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +104,7 @@
 		8E10F5D5261C8AB500F63D3D /* Metta */ = {
 			isa = PBXGroup;
 			children = (
+				B59090E426275D5A00628F63 /* service */,
 				8E3E6E47261C8F800079FDB0 /* Supporting File */,
 				8E3E6E46261C8F6F0079FDB0 /* Model */,
 				8E3E6E45261C8F660079FDB0 /* View */,
@@ -112,13 +119,13 @@
 		8E3E6E44261C8F5A0079FDB0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B5D34F88262558FB00E04E01 /* onboardingViewController.swift */,
+				B5D34F88262558FB00E04E01 /* OnboardingViewController.swift */,
 				B5C3DC0926220EDF00FA1865 /* ViewController.swift */,
 				B5C3DBE52621781000FA1865 /* MeditationCell.swift */,
 				BFAB6426261EC6C100F98711 /* MeditationDetailViewController.swift */,
 				8E2F2B1E2625AE630054D49B /* CongratulationViewController.swift */,
-				8E10F5DA261C8AB500F63D3D /* ViewController.swift */,
 				8E5CB122261F0E6200531E5E /* MeditationTimerViewController.swift */,
+				B59090E026275C6F00628F63 /* LoadingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -126,10 +133,7 @@
 		8E3E6E45261C8F660079FDB0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8E5CB123261F0E6200531E5E /* MeditationTimerViewController.xib */,
-				BFAB6427261EC6C100F98711 /* MeditationDetailViewController.xib */,
 				8E2F2B1F2625AE630054D49B /* CongratulationViewController.xib */,
-				8E10F5DC261C8AB500F63D3D /* Main.storyboard */,
 				B5C3DBE92621782A00FA1865 /* Main.storyboard */,
 				8E5CB123261F0E6200531E5E /* MeditationTimerViewController.xib */,
 				BFAB6427261EC6C100F98711 /* MeditationDetailViewController.xib */,
@@ -178,6 +182,16 @@
 				B584D4B026206C740098BE82 /* Forest 1m.mp3 */,
 			);
 			path = sound;
+			sourceTree = "<group>";
+		};
+		B59090E426275D5A00628F63 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				B59090E526275D5A00628F63 /* StorageManager.swift */,
+				B59090E626275D5A00628F63 /* NavigationManager.swift */,
+			);
+			name = service;
+			path = "../../MC 1/Metta-iOS 1.1/Metta/service";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +270,6 @@
 				8E10F5E3261C8AB500F63D3D /* Assets.xcassets in Resources */,
 				8E2F2B212625AE630054D49B /* CongratulationViewController.xib in Resources */,
 				B584D4B126206C740098BE82 /* Forest 1m.mp3 in Resources */,
-				8E10F5DE261C8AB500F63D3D /* Main.storyboard in Resources */,
 				BFAB6436261F1B8500F98711 /* MeditationDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,10 +289,12 @@
 				8E10F5E1261C8AB500F63D3D /* Metta.xcdatamodeld in Sources */,
 				B5C3DBE62621781000FA1865 /* MeditationCell.swift in Sources */,
 				B5C3DC0A26220EDF00FA1865 /* ViewController.swift in Sources */,
-				B5D34F89262558FB00E04E01 /* onboardingViewController.swift in Sources */,
+				B5D34F89262558FB00E04E01 /* OnboardingViewController.swift in Sources */,
+				B59090E826275D5A00628F63 /* NavigationManager.swift in Sources */,
 				8E10F5D7261C8AB500F63D3D /* AppDelegate.swift in Sources */,
-				B5C3DBEE26217B2700FA1865 /* ViewController.swift in Sources */,
 				8E10F5D9261C8AB500F63D3D /* SceneDelegate.swift in Sources */,
+				B59090E126275C6F00628F63 /* LoadingViewController.swift in Sources */,
+				B59090E726275D5A00628F63 /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -44,11 +44,7 @@ class MeditationDetailViewController: UIViewController{
         
         //picker
         pickerHolderView.isHidden = true
-        
-        
-        
         selectedDuration = timeArray[0]
-        
         timePickedLabel.setTitle(String(timeArray[0]) + " mins", for: .normal)
         
         self.title = "Meditation Detail"
@@ -99,16 +95,8 @@ class MeditationDetailViewController: UIViewController{
         }catch{
             print(error)
         }
-        
-        
-        
-        
-        
-        
-        
     }
 
-    
     //function hide UIPickerView
     @objc func tapFunction(gestureRecognizer: UITapGestureRecognizer){
         // local bool
@@ -123,13 +111,7 @@ class MeditationDetailViewController: UIViewController{
             // we're going to hide it
             t = CGAffineTransform(scaleX: 0.5, y: 0.01)
         }
-
-        // if picker holder height constant is > 0 (it's open / showing)
-        //      set it to 0
-        // else
-        //      set it to defaultPickerHolderViewHeight
-//        self.heightHolderConstraint.constant = self.heightHolderConstraint.constant > 0 ? 0 : defaultPickerHolderViewHeight
-
+        
         // animate the change
         UIView.animate(withDuration: animationDruation, animations: {
             self.timePicker.transform = t
@@ -149,7 +131,6 @@ class MeditationDetailViewController: UIViewController{
         meditationTimerVC.runCount = selectedDuration * 60
         meditationTimerVC.meditationIndexPath = meditationIndexPath
         meditationTimerVC.modalPresentationStyle = .fullScreen
-        
         self.present(meditationTimerVC, animated: true, completion: nil)
     }
     
@@ -157,7 +138,6 @@ class MeditationDetailViewController: UIViewController{
         guard let firstIndex = timeArray.firstIndex(of: meditations[meditationIndexPath].minDuration) else { return }
         timeArray = Array(timeArray[firstIndex ..< timeArray.count])
     }
-    
 }
 
 extension MeditationDetailViewController: UIPickerViewDataSource{
@@ -170,7 +150,6 @@ extension MeditationDetailViewController: UIPickerViewDataSource{
     }
     
 }
-
 
 
 extension MeditationDetailViewController: UIPickerViewDelegate{

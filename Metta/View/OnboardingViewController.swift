@@ -7,27 +7,24 @@
 
 import UIKit
 
-class onboardingViewController: UIViewController {
+class OnboardingViewController: UIViewController {
 
     @IBOutlet weak var mediImage: UIImageView!
+
+    private let storageManager = StorageManager()
+    private let navigationManager = NavigationManager()
     
     @IBAction func nextButton(_ sender: UIButton) {
-        
-//        let vc = UIViewController()
-//        vc.modalPresentationStyle = .fullScreen
-        
-        performSegue(withIdentifier: "onboardingToVCIdentifier", sender: self)
+        navigationManager.show(screen: .home, inController: self)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         mediImage.image = UIImage(named: "medi-intro")
-
-        // Do any additional setup after loading the view.
+        updateFlag()
     }
     
-
-    
-    
-
+    func updateFlag() {
+        storageManager.setOnBoardingSeen()
+    }
 }

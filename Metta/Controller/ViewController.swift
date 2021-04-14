@@ -12,25 +12,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     let defaults = UserDefaults.standard
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-//        tableView.showsVerticalScrollIndicator = false
-
         if let data = UserDefaults.standard.value(forKey:"Meditation") as? Data {
             meditations = try! PropertyListDecoder().decode(Array<Meditation>.self, from: data)
         }
     }
-
+    
     //hide navigation bar di home-page, dan munculin navigation bar di VC lain
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
         tableView.reloadData()
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
@@ -49,23 +45,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //ketika click cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
+        
         let meditationDetailVC = MeditationDetailViewController(nibName: "MeditationDetailViewController", bundle: nil)
         meditationDetailVC.meditationIndexPath = indexPath.row
-        
         self.navigationController?.pushViewController(meditationDetailVC, animated: true)
     }
     
-    //Ke page meditation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let destination = segue.destination as? DetailVC {
-//            destination.meditation = meditations[(tableView.indexPathForSelectedRow?.row)!]
-//            destination.title = "\(meditations[(tableView.indexPathForSelectedRow?.row)!].name)"
-//        }
-//
-//    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        
         //minta tableView untuk menampilkan cell dari cell yang sudah dibuat dengan identifier ... di lokasi index TableView berupa indexPath. dan cell ini kepemilikan dari MeditationCell
         let cell = (tableView.dequeueReusableCell(withIdentifier: "meditationCellIdentifier", for: indexPath) as? MeditationCell)!
         
