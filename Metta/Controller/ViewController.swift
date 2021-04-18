@@ -18,6 +18,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if let data = UserDefaults.standard.value(forKey:"Meditation") as? Data {
             meditations = try! PropertyListDecoder().decode(Array<Meditation>.self, from: data)
         }
+        let homeDirURL = URL(fileURLWithPath: NSHomeDirectory())
+        print(homeDirURL.path)
     }
     
     //hide navigation bar di home-page, dan munculin navigation bar di VC lain
